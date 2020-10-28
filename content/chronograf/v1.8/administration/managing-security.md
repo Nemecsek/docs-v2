@@ -461,10 +461,9 @@ With basic authentication enabled, Chronograf authorization rules are not enforc
 For more information, see [Cross-organization SuperAdmin status](/chronograf/v1.8/administration/managing-chronograf-users/#cross-organization-superadmin-status).
 
 Turn on HTTP basic authentication access to restrict HTTP requests to Chronograf to selected users.
-Use the Chronograf CLI with `—htpasswd <path to .htpasswd file>` or `HTPASSWD` environment variable.
-The `.htpasswd` file contains users and their passwords.
-For more information about managing the htpasswd utility, see [NGINX documentation](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/).
-<!-- For more information about how to restrict access with HTTP basic authentication, see [NGINX documentation](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/). -->
+Use the Chronograf CLI with the `—htpasswd <path to .htpasswd file>` flag or use the `HTPASSWD` environment variable.
+The `.htpasswd` file contains users and their passwords, and should be created with a password file utility tool such as `apache2-utils`.
+For more information about how to restrict access with basic authentication, see NGINX documentation on [Restricting Access with HTTP Basic Authentication](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/).
 
 ## Configure TLS (Transport Layer Security) and HTTPS
 
