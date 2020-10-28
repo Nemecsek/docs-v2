@@ -422,7 +422,7 @@ TOKEN_SECRET="ZNh2N9toMwUVQxTVEe2ZnnMtgkh3xqKZ"
 ```
 
 {{% note %}}
-Do not use special characters for the `GENERIC_CLIENT_ID` as AD FS will split strings here, finally resulting in an identifier mismatch.
+Do not use special characters for the `GENERIC_CLIENT_ID` as AD FS may split strings at the special character, resulting in an identifier mismatch.
 {{% /note %}}
 
 ### Configure authentication duration
@@ -464,6 +464,7 @@ Turn on HTTP basic authentication access to restrict HTTP requests to Chronograf
 Use the Chronograf CLI with `—htpasswd <path to .htpasswd file>` or `HTPASSWD` environment variable.
 The `.htpasswd` file contains users and their passwords.
 For more information about managing the htpasswd utility, see [NGINX documentation](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/).
+<!-- For more information about how to restrict access with HTTP basic authentication, see [NGINX documentation](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/). -->
 
 ## Configure TLS (Transport Layer Security) and HTTPS
 
